@@ -1,0 +1,226 @@
+<HTML><HEAD>
+<TITLE>plot datafile</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<script>
+function changeText()
+{
+ document.getElementById('boldStuff').innerHTML = document.getElementById('inputTextToSave').value;
+}
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("inputTextToSave").value;
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = 'Plot.svg';//''document.getElementById("inputFileNameToSaveAs").value;
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+</script>
+</HEAD>
+<LINK href="over.css" type=text/css rel=stylesheet>
+
+<body>
+Нажмите PLOT <button onclick="changeText()">PLOT</button>
+<button onclick="saveTextAsFile()">Save SVG</button>
+<table>
+    <tr><td>Text to Save:</td></tr>
+    <tr>
+        <td colspan="3">
+            <textarea id="inputTextToSave" cols="80" rows="10">
+<svg version='1.1' width='400' height='300' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='275,225
+277.5,219.75
+280,214
+282.5,207.75
+285,200.99999999999997
+287.5,193.74999999999997
+290,185.99999999999994
+292.5,177.74999999999994
+295,168.99999999999994
+297.5,159.74999999999994
+300,149.99999999999991
+302.5,139.74999999999991
+305,128.9999999999999
+307.5,117.74999999999986
+310.00000000000006,105.99999999999986
+312.50000000000006,93.74999999999983
+315.00000000000006,80.9999999999998
+317.50000000000006,67.7499999999998
+320.00000000000006,53.99999999999978
+322.50000000000006,39.75002049999978
+325.00000000000006,25.000049999999735
+327.50000000000006,9.750080499999704
+330.00000000000006,0
+332.50000000000006,0
+335.00000000000006,0
+337.50000000000006,0
+340.00000000000006,0
+342.50000000000006,0
+345.00000000000006,0
+347.50000000000006,0
+350.00000000000006,0
+352.50000000000006,0
+355.00000000000006,0
+357.50000000000006,0
+360.00000000000006,0
+362.5,0
+365,0
+367.5,0
+370,0
+372.5,0
+375,0
+377.49999999999994,0
+379.99999999999994,0
+382.49999999999994,0
+384.99999999999994,0
+387.49999999999994,0
+389.99999999999994,0
+392.4999999999999,0
+394.9999999999999,0
+397.4999999999999,0
+399.9999999999999,0
+402.4999999999999,0
+404.9999999999999,0
+407.4999999999999,0
+409.99999999999983,0
+412.49999999999983,0
+414.99999999999983,0
+417.49999999999983,0
+419.99999999999983,0
+422.49999999999983,0
+424.9999999999998,0
+427.4999999999998,0
+429.9999999999998,0
+432.4999999999998,0
+434.9999999999998,0
+437.4999999999998,0
+439.9999999999998,0
+442.4999999999997,0
+444.9999999999997,0
+447.4999999999997,0
+449.9999999999997,0
+452.4999999999997,0
+454.9999999999997,0
+457.4999999999997,0
+459.9999999999997,0
+462.4999999999997,0
+464.99999999999966,0
+467.49999999999966,0
+469.99999999999966,0
+472.49999999999966,0
+474.99999999999966,0
+477.49999999999966,0
+479.9999999999996,0
+482.4999999999996,0
+484.9999999999996,0
+487.4999999999996,0
+489.9999999999996,0
+492.4999999999996,0
+494.99999999999955,0
+497.49999999999955,0
+499.99999999999955,0
+500,0
+' />
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,0 500,0' />
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,0 0,500' />
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0.0001,0 0.0001,10' />
+<text x='0.0001' y='10' fill='black' font-family='Arial' font-size='10'>-10</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='50,0 50,10' />
+<text x='50' y='10' fill='black' font-family='Arial' font-size='10'>-8</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='100,0 100,10' />
+<text x='100' y='10' fill='black' font-family='Arial' font-size='10'>-6</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='150,0 150,10' />
+<text x='150' y='10' fill='black' font-family='Arial' font-size='10'>-4</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='200,0 200,10' />
+<text x='200' y='10' fill='black' font-family='Arial' font-size='10'>-2</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='300,0 300,10' />
+<text x='300' y='10' fill='black' font-family='Arial' font-size='10'>2</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='350,0 350,10' />
+<text x='350' y='10' fill='black' font-family='Arial' font-size='10'>4</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='400,0 400,10' />
+<text x='400' y='10' fill='black' font-family='Arial' font-size='10'>6</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='450,0 450,10' />
+<text x='450' y='10' fill='black' font-family='Arial' font-size='10'>8</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='500,0 500,10' />
+<text x='500' y='10' fill='black' font-family='Arial' font-size='10'>10</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,500 10,500' />
+<text x='10' y='500' fill='black' font-family='Arial' font-size='10'>-10</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,450 10,450' />
+<text x='10' y='450' fill='black' font-family='Arial' font-size='10'>-8</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,400 10,400' />
+<text x='10' y='400' fill='black' font-family='Arial' font-size='10'>-6</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,350 10,350' />
+<text x='10' y='350' fill='black' font-family='Arial' font-size='10'>-4</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,300 10,300' />
+<text x='10' y='300' fill='black' font-family='Arial' font-size='10'>-2</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,250 10,250' />
+<text x='10' y='250' fill='black' font-family='Arial' font-size='10'>0</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,200 10,200' />
+<text x='10' y='200' fill='black' font-family='Arial' font-size='10'>2</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,150 10,150' />
+<text x='10' y='150' fill='black' font-family='Arial' font-size='10'>4</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,100 10,100' />
+<text x='10' y='100' fill='black' font-family='Arial' font-size='10'>6</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,50 10,50' />
+<text x='10' y='50' fill='black' font-family='Arial' font-size='10'>8</text>
+<polyline fill='none' stroke='#008000' stroke-width='0.5' points='0,0.0001 10,0.0001' />
+<text x='10' y='0.0001' fill='black' font-family='Arial' font-size='10'>10</text>
+</svg>
+</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>Filename to Save As:</td>
+        <td><input id="inputFileNameToSaveAs"></input></td>
+        <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+    </tr>
+    <tr>
+        <td>Select a File to Load:</td>
+        <td><input type="file" id="fileToLoad"></td>
+        <td><button onclick="loadFileAsText()">Load Selected File</button><td>
+    </tr>
+</table>
+<div class="floatTL">
+<b id='boldStuff'>SVG</b> 
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter42436314 = new Ya.Metrika({
+                    id:42436314,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/42436314" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
